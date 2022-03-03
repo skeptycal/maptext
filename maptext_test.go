@@ -3,10 +3,11 @@ package maptext
 import (
 	"reflect"
 	"testing"
+
+	"github.com/skeptycal/testes"
 )
 
 func TestNewRoot(t *testing.T) {
-
 	tests := []struct {
 		testName string
 		name     string
@@ -20,6 +21,8 @@ func TestNewRoot(t *testing.T) {
 		{"root", "root", []byte("rootData"), &node{"root", []byte("rootData"), nil, nil, nil}},
 	}
 	for _, tt := range tests {
+
+		testes.TRun()
 		t.Run(tt.testName, func(t *testing.T) {
 			if got := NewRoot(tt.name, tt.data); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("NewRoot() = %v, want %v", got, tt.want)

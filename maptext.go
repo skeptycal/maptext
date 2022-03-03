@@ -32,4 +32,4 @@ func (n *node) Len() int           { return len(n.data) }
 func (n *node) Swap(i, j int)      { n.data, n.name = n.parent.data, n.parent.name }
 func (n *node) Less(i, j int) bool { return len(n.data) < len(n.parent.data) }
 
-func (n *node) Delete()
+func (n *node) Delete() {}
