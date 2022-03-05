@@ -1,7 +1,11 @@
 package maptext // import "github.com/skeptycal/maptext"
 
+var BlankData = []byte{}
 func CheckSum(data []byte) [16]byte
 func NewNode(name string, data []byte, root, parent *node) *node
 func NewRoot(name string, data []byte) *node
-func NewNodeMap(name string, parent *node) *nodeMap
 type Any = interface{}
+type EdgeMap map[id]*edge
+type NodeMap map[id]*node
+type Tree struct{ ... }
+    func NewTree(name string) *Tree
