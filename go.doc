@@ -1,0 +1,7 @@
+package maptext // import "github.com/skeptycal/maptext"
+
+func CheckSum(data []byte) [16]byte
+func NewNode(name string, data []byte, root, parent *node) *node
+func NewRoot(name string, data []byte) *node
+func NewNodeMap(name string, parent *node) *nodeMap
+type Any = interface{}
